@@ -40,7 +40,7 @@
     
     return box1FitInto2;
   } else {
-    return 0;
+    return 1;
   }
 }
 

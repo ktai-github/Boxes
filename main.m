@@ -11,15 +11,17 @@
 
 int main(int argc, const char * argv[]) {
   @autoreleasepool {
+    
     Box *xBox = [[Box alloc] initWithParams:2 :3 :4];
     float xBoxVolume = [xBox volume];
-    NSLog(@"Volume is %.f", xBoxVolume);
+    NSLog(@"xBox volume is %.f", xBoxVolume);
+    
     Box *xBox360 = [[Box alloc] initWithParams:5 :6 :7];
     float xBox360Volume = [xBox360 volume];
-    NSLog(@"Volume is %.f", xBox360Volume);
+    NSLog(@"xBox 360 volume is %.f", xBox360Volume);
     
     float fit = [xBox360 timesWillFit:xBox360 :xBox];
-    NSLog(@"xBox will fit into xBox360 %.2f times", fit);
+    NSLog(@"will fit %.2f times", fit);
   }
   return 0;
 }
