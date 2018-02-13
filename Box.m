@@ -26,4 +26,22 @@
   return self.height * self.width * self.length;
 }
 
+- (float) timesWillFit: (Box*) box1 : (Box*) box2 {
+  
+  if (box1.volume > box2.volume) {
+  
+    float box2FitInto1 = box1.volume / box2.volume;
+    
+    return box2FitInto1;
+  
+  } else if (box2.volume > box1.volume){
+  
+    float box1FitInto2 = box2.volume / box1.volume;
+    
+    return box1FitInto2;
+  } else {
+    return 0;
+  }
+}
+
 @end

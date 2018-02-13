@@ -14,10 +14,12 @@
 @property float width;
 @property float length;
 
-- (instancetype) initWithParams:(float) height :
-                                (float) width :
-                                (float) length;
+- (instancetype) initWithParams: (float) height :
+                                 (float) width :
+                                 (float) length;
 
 - (float) volume;
+
+- (float) timesWillFit: (Box*) box1 : (Box*) box2;
 
 @end
