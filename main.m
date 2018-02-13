@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Box.h"
 
 int main(int argc, const char * argv[]) {
   @autoreleasepool {
-      
+    Box *xBox = [[Box alloc] initWithParams:2 :3 :4];
+    float xBoxVolume = [xBox volume];
+    NSLog(@"%f", xBoxVolume);
   }
   return 0;
 }
